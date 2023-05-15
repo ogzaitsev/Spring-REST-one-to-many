@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "162502e3-a36a-409c-8003-4c4679ec823d",
+		"name": "digitalchief",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24570556"
+	},
+	"item": [
+		{
+			"name": "add_department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"IT\",\r\n    \"description\": \"Information technology\",\r\n    \"minSalary\": 500,\r\n    \"maxSalary\": 2500\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/digitalchiefapi/departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"digitalchiefapi",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"department\": {\r\n            \"id\": 1\r\n        },\r\n        \"firstName\": \"Oleg\",\r\n        \"lastName\": \"Zaitsev\",\r\n        \"salary\": 700\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/digitalchiefapi/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"digitalchiefapi",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_departments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 9,\r\n    \"name\": \"Sergey Usumaki\",\r\n    \"department\": \"HR\",\r\n    \"salary\": 900\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/digitalchiefapi/departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"digitalchiefapi",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_department_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/digitalchiefapi/departments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"digitalchiefapi",
+						"departments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/digitalchiefapi/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"digitalchiefapi",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_employee_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/digitalchiefapi/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"digitalchiefapi",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_department",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"HR\",\r\n    \"description\": \"Human Resources & Management\",\r\n    \"minSalary\": 700,\r\n    \"maxSalary\": 2200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/digitalchiefapi/departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"digitalchiefapi",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"department\": {\r\n        \"id\": 1\r\n    },\r\n    \"firstName\": \"Oleg\",\r\n    \"lastName\": \"Zaitsev\",\r\n    \"salary\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/digitalchiefapi/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"digitalchiefapi",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/digitalchiefapi/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"digitalchiefapi",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_department",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/digitalchiefapi/departments/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"digitalchiefapi",
+						"departments",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
