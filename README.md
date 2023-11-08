@@ -1,5 +1,5 @@
 # REST API One-To-Many
-Java Spring Boot application. Тестовое задание для компании Digital Chief
+Java Spring Boot application
 
 ## Как собрать и запустить приложение
 * Скачать проект с GitHub
